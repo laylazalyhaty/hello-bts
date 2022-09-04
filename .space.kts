@@ -11,7 +11,7 @@ job("Build, push and deploy") {
         gitPush {enabled = true}
     }
 
-	container(
+	container( 
          displayName = "Sending announcement to channel Deployments",
     ) {
     
