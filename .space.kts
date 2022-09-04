@@ -10,5 +10,5 @@ job("Hello World!") {
 
 job("Hello BTS!") {
     container(displayName = "Say Hello KNJ", image = "hello-knj")
-    container(displayName = "Say Hello KSJ", image = "hello-ksj")
+    container(displayName = "Say Hello KNJ", image = "hello-knj")
 }
