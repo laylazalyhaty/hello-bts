@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  project:
+    container_name: hello-bts
+    image: laylazalyhaty/hello-bts
+    ports:
+      - 10999:10999
+    networks:
+      - java_network
+    depends_on:
+      - database
+  database:
+    container_name: postgres-bts
+    image: postgres:13.2-alpine
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 8080:8080
+    networks:
+      - java_network
+
+networks:
+  java_network:
+    name: bts
